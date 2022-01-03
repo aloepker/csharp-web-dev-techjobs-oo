@@ -37,6 +37,17 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id);
         }
-        
+        public override string ToString()
+        {
+            return $" {this.ToString()} ";
+            /* if (this.ToString() == null) 
+             {
+                 return $" {this.ToString()} ";
+             }
+             else
+             {
+                 return $"Data not available";
+             }*/
+        }
     }
 }

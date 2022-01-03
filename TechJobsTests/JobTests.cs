@@ -37,5 +37,34 @@ namespace TechJobsTests
         {
             Assert.IsFalse(testJob3.Equals(testJob4));
         }
+        [TestMethod]
+        public void ToStringTest1()
+        {
+            //When passed a Job object, it should return a string that contains a blank line before and after the job information.
+            Assert.AreEqual(testJob3.Name.ToString(), " Product tester ");
+        }
+        [TestMethod]
+        public void ToStringTest2()
+        {
+            //The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line.
+          
+            //why the hell arnt we cycling an array? or making a different string for each part of the object?
+        }
+        [TestMethod]
+        public void ToStringTest3()
+        {
+            //If a field is empty, the method should add, “Data not available” after the label.
+
+            //this is painful, i cant figure out why this is used to print all parts of an object instead of a custom method
+            //for code readability, I feel more confused why we are editing tostring.. we are not really to-stringing anything
+
+            //i cant figure out why tdd tests are not already written by the person who wants you to solve that section of the code correctly, ie the employer
+            //like wouldnt they know what the code needs to basically have pluggd in already for you to solve those problems? 
+            //and the 1 test at a time thing is extra stupid..
+            //this is like trying to use gps, but every 10% of the map has to be guessed 80% succesfully ("succesful enough to pass") before loading the next 10%
+            //which feels stupid and undermining, I can look at the entire map before starting a journey, not have to backtrack wrong turns forceably by design
+           
+
+        }
     }
 }
