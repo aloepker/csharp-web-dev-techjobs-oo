@@ -35,7 +35,7 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobsForEquality()
         {
-            Assert.AreEqual(testJob3.Id, testJob4.Id - 1);
+            Assert.IsFalse(testJob3.Equals(testJob4));
         }
     }
 }
