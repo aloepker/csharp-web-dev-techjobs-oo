@@ -20,9 +20,13 @@ namespace TechJobsOO
         }
         public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) :this()
         {
-            
+            this.Name = name;
+            this.EmployerName = employerName;
+            this.EmployerLocation = employerLocation;
+            this.JobType = jobType;
+            this.JobCoreCompetency = jobCoreCompetency;
         }
-
+        // TODO: Generate Equals() and GetHashCode() methods.
         public override bool Equals(object obj)
         {
             return obj is Job job &&
@@ -33,6 +37,6 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id);
         }
-        // TODO: Generate Equals() and GetHashCode() methods.
+        
     }
 }
