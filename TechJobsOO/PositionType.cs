@@ -1,8 +1,12 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class PositionType
+    public class PositionType : JobField
     {
+        public PositionType(string value) : base(value)
+        {
+        }
+        /*
         public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; }
@@ -30,7 +34,7 @@ namespace TechJobsOO
         public override int GetHashCode()
         {
             return HashCode.Combine(Id);
-        }
+        } */
 
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
     }

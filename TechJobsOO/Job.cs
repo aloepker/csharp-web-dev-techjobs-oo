@@ -39,15 +39,24 @@ namespace TechJobsOO
         }
         public override string ToString()
         {
-            return $" {this.ToString()} ";
-            /* if (this.ToString() == null) 
-             {
-                 return $" {this.ToString()} ";
-             }
-             else
-             {
-                 return $"Data not available";
-             }*/
+            string jobName;
+            string emp;
+            string local;
+            string positionType;
+            string competence;
+
+            if (this.Name.ToString() == "") { jobName = "Data not available"; } else { jobName = this.Name.ToString(); }
+            if (this.EmployerName.ToString() == "") {  emp = "Data not available"; } else { emp = this.EmployerName.ToString(); }
+            if (this.EmployerLocation.ToString() == "") { local = "Data not available"; } else { local = this.EmployerLocation.ToString(); }
+            if (this.JobType.ToString() == "") { positionType = "Data not available"; } else { positionType = this.JobType.ToString(); }
+            if (this.JobCoreCompetency.ToString() == "") { competence = "Data not available"; } else { competence = this.JobCoreCompetency.ToString(); }
+
+            return Environment.NewLine + " ID: " + this.Id + Environment.NewLine
+                +" NAME: " + jobName + Environment.NewLine
+                + " Employer: " + emp + Environment.NewLine
+                + " Location: " + local + Environment.NewLine
+                + " Position: " + positionType + Environment.NewLine
+                + " Core Competency: " + competence + Environment.NewLine;
         }
     }
 }
