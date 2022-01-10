@@ -45,7 +45,7 @@ namespace TechJobsOO
             string positionType;
             string competence;
 
-            if (this.Name.ToString() == "") { jobName = "Data not available"; } else { jobName = this.Name.ToString(); }
+            if (this.Name == "") { jobName = "Data not available"; } else { jobName = this.Name; }
             if (this.EmployerName.ToString() == "") {  emp = "Data not available"; } else { emp = this.EmployerName.ToString(); }
             if (this.EmployerLocation.ToString() == "") { local = "Data not available"; } else { local = this.EmployerLocation.ToString(); }
             if (this.JobType.ToString() == "") { positionType = "Data not available"; } else { positionType = this.JobType.ToString(); }

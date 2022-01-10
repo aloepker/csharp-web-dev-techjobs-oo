@@ -50,12 +50,23 @@ namespace TechJobsTests
         }
         [TestMethod]
         public void ToStringTest2()
-        {
+        { /*Pearce Odegard:
+okay so idk if this is going to make sense
+I suggest hardcoding the string with all the proper formatting and everything that you expect
+like ‘ID: { job id}\n etc..’
+Then test that the output of your to string matches up with the hard coded output*/
+
             //The string should contain a label for each field, followed by the data stored in that field. Each field should be on its own line.
-           
-            //cant figure out how to write the tests for something like this, but it does it..
-            // also cant figure out why i would irl, since my employer should basically know the test and its outcome before I am assigned the work
-            //and in a situation where I am heading the projet change, I can write the test I need after i impliment the feature corectly. TDD is busy work..
+            string testString;
+            Console.WriteLine(testJob3.ToString());
+           // testString = "\nID: 23\nNAME: Product tester\n Employer: ACME\n Location: Desert\n Position: Quality control\n Core Competency: Persistence\n";
+            testString = Environment.NewLine + " ID: " + testJob3.Id + Environment.NewLine
+                + " NAME: " + testJob3.Name + Environment.NewLine
+                + " Employer: " + testJob3.EmployerName + Environment.NewLine
+                + " Location: " + testJob3.EmployerLocation + Environment.NewLine
+                + " Position: " + testJob3.JobType + Environment.NewLine
+                + " Core Competency: " + testJob3.JobCoreCompetency + Environment.NewLine;
+            Assert.AreEqual(testJob3.ToString(), testString);
         }
         [TestMethod]
         public void ToStringTest3()
